@@ -1,0 +1,127 @@
+.youtube-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 33px;
+    background-color: rgb(248, 247, 247);
+    padding-top: 82px;
+    padding-left: 95px;
+    padding-right: 24px;
+}
+
+@media (max-width: 870px){
+    .youtube-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px){
+    .youtube-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* multi line 
+css
+comments*/
+
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    margin-top: 5px;
+    
+}
+.video-thumbnail{
+    position: relative;
+    cursor: pointer;
+}
+.thumbnail{
+    width: 100%;
+}
+.video-time{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 12px;
+    font-family: Roboto;
+    bottom: 12px;
+    right: 4px;
+    padding: 4px 4px;
+    border-radius: 2px;
+}
+.channel-pic{
+    width: 72%;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.video-channel-pic{
+    padding-top: 3px;
+    
+    display: inline-block;
+}
+.video-info{
+    padding-top: 4px;
+    margin-left: -1px;
+}
+.video-title{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 19px;
+}
+.video-channel{
+    margin-top: 5px;
+    margin-bottom: 4px;
+    color: rgb(81, 81, 81);
+    font-size: 12px;
+    cursor: pointer;
+}
+.views-time{
+    margin-top: 0;
+    color: rgb(81, 81, 81);
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.channel-info{
+    position: relative;
+}
+.channel-tooltip{
+    background-color: white;
+    width: 200px;
+    padding: 12px 12px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    position: absolute;
+    top: 47px;
+    z-index: 300;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.15s;
+}
+.channel-tooltip-picture{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+.channel-tooltip-name{
+    font-weight: bold;
+    font-family: Roboto;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+.channel-tooltip-stats{
+    font-family: Roboto;
+    font-size: 13px;
+    color: grey;
+}
+.channel-info:hover .channel-tooltip{
+    opacity: 1;
+}
